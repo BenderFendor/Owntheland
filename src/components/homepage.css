@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=League+Spartan:wght@100..900&family=Passion+One:wght@400;700;900&family=Ultra&family=Young+Serif&display=swap');
+
+body {
+    background-image: url(../images/homepageflowers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.homepage {
+    padding-top: 4em !important;
+    text-align: center;
+    padding: 20px;
+    font-size: 60px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.homepage h2 {
+    font-size: 30px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+}
+.homepage p {
+    max-width: none;
+}

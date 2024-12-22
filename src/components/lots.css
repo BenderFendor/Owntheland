@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-family: 'EB Garamond', sans-serif;
+}
+
+.pennsylvania {
+    background-image: url('../images/pa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+}

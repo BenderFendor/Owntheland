@@ -1,0 +1,18 @@
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+nav ul li a {
+    color: white !important;
+}
+nav ul {
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
