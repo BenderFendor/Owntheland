@@ -12,32 +12,19 @@ background: "../images/lotbackground.png"
 
 [Section[PENNSYLVANIA]]
 ### Pennsylvania
-- **Lackawanna County**
-  - [Lyman Ln, Gouldsboro](states/pennsylvania/counties/lackawanna-county/lyman-ln-gouldsboro/)
-  - [Hilldell Rd, Moscow](states/pennsylvania/counties/lackawanna-county/hilldell-rd-moscow/)
-  - [9605 E Independence Ave](states/pennsylvania/counties/lackawanna-county/9605-e-independence-ave/)
-  - [Overview of Lackawanna County](states/pennsylvania/counties/lackawanna-county/lackawanna-county.md)
-
-- **Luzerne County**
-  - [Mink Springs Ct](states/pennsylvania/counties/luzerne-county/mink-springs-ct/)
-  - [Locust St, Hazleton City](states/pennsylvania/counties/luzerne-county/locust-st-hazleton-city/)
-  - [Overview of Luzerne County](states/pennsylvania/counties/luzerne-county/luzerne-county.md)
-
-- **Pike County**
-  - [Bartlett Drive, Dingmans Ferry](states/pennsylvania/counties/pike-county/bartlett-drive-dingmans-ferry/)
-  - [Cowan Rd, Milford](states/pennsylvania/counties/pike-county/cowan-rd-milford/)
-  - [Overview of Pike County](states/pennsylvania/counties/pike-county/pike-county.md)
-
-- **Wayne County**
-  - [Brandywine Drive, Honesdale](states/pennsylvania/counties/wayne-county/brandywine-drive-honesdale/)
-  - [Overview of Wayne County](states/pennsylvania/counties/wayne-county/wayne-county.md)
+  - [Lackawanna County](states/pennsylvania/counties/lackawanna-county)
+  - [Luzerne County](states/pennsylvania/counties/luzerne-county)
+  - [Pike County](states/pennsylvania/counties/pike-county)
+  - [Wayne County](states/pennsylvania/counties/wayne-county)
 [End[PENNSYLVANIA]]
 
+[Section[PENNSYLVANIA]]
 ### Missouri
 - **Franklin County**
   - [Meadowview Dr, New Haven](states/missouri/counties/franklin-county/meadowview-dr-new-haven/)
   - [Wheel Est, Villa Ridge](states/missouri/counties/franklin-county/wheel-est-villa-ridge/)
   - [Overview of Franklin County](states/missouri/counties/franklin-county/franklin-county.md)
+[End[PENNSYLVANIA]]
 
 ### Mississippi
 - **Madison County**

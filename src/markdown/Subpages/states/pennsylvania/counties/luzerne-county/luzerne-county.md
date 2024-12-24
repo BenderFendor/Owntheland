@@ -1,5 +1,5 @@
 ---
-slug: "/your-slug"
+slug: "lots/states/pennsylvania/counties/luzerne-county"
 title: "Your Title"
 date: "2024-01-01"
 level: "your-level"

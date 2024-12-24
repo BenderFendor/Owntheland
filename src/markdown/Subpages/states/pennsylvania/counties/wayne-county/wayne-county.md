@@ -1,11 +1,9 @@
 ---
-slug: "/your-slug"
+slug: "lots/states/pennsylvania/counties/wayne-county"
 title: "Your Title"
 date: "2024-01-01"
 level: "your-level"
 ---
-
-# FILE: /markdown/markdown/Subpages/states/pennsylvania/counties/wayne-county/wayne-county.md
 
 # Wayne County, Pennsylvania
 

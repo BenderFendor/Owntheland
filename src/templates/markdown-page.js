@@ -21,15 +21,28 @@ export default function MarkdownPage({ data }) {
     }
 
     if (frontmatter.background) {
-      document.body.style.cssText = `background-image: url(${frontmatter.background.publicURL}); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;`
+      document.body.style.backgroundImage = `url(${frontmatter.background})`
+      document.body.style.backgroundSize = 'cover'
+      document.body.style.backgroundRepeat = 'no-repeat'
+      document.body.style.backgroundAttachment = 'fixed'
+      document.body.style.backgroundPosition = 'center'
     } else {
       document.body.style.backgroundImage = ''
     }
   }, [frontmatter.level, frontmatter.background])
 
-  const replacedHtml = html
+  let replacedHtml = html
     .replace(/\[Section\[(.*?)\]\]/g, (match, p1) => `<div class="${p1.toLowerCase()}">`)
     .replace(/\[End\[(.*?)\]\]/g, "</div>")
+
+  if (frontmatter.level === 'level2') {
+    replacedHtml = `<h1>${frontmatter.title}</h1>` + replacedHtml
+      .split(/---/)
+      .map(section => section.trim())
+      .filter(section => section.length > 0)
+      .map(section => `<div class="lots">${section}</div>`)
+      .join('')
+  }
 
   return (
     <Layout>

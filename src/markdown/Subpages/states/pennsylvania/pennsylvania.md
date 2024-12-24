@@ -1,8 +1,8 @@
 ---
-slug: "/your-slug"
-title: "Your Title"
+slug: "/pennsylvania"
+title: "Pennsylvania"
 date: "2024-01-01"
-level: "your-level"
+level: "states"
 ---
 
 # Pennsylvania Overview

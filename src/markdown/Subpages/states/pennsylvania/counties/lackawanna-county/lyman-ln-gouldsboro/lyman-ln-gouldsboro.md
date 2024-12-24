@@ -1,5 +1,5 @@
 ---
-slug: "/lackawanna/lyman"
+slug: "lots/states/pennsylvania/counties/lackawanna-county/lyman"
 title: "My Page Title"
 date: "2024-01-01"
 ---
