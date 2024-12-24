@@ -15,7 +15,7 @@ level: "lots"
 
 [Section[Missouri]]
 ### Missouri
-  - [Independence](states/missouri/independence)
+  - [Independence](states/missouri/counties/independence)
   - [Franklin County](states/missouri/counties/franklin-county)
   - [St. Louis County](states/missouri/counties/st-louis-county)
 [End[Missouri]]
