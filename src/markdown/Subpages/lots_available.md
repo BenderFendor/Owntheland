@@ -1,13 +1,9 @@
 ---
 slug: "/lots"
-title: "My Page Title"
+title: "Available Lots"
 date: "2024-01-01"
 level: "lots"
 ---
-
-# Available Lots
-
-## Lot Listings
 
 [Section[PENNSYLVANIA]]
 ### Pennsylvania
@@ -19,22 +15,18 @@ level: "lots"
 
 [Section[Missouri]]
 ### Missouri
-- **Franklin County**
-  - [Meadowview Dr, New Haven](states/missouri/counties/franklin-county/meadowview-dr-new-haven/)
-  - [Wheel Est, Villa Ridge](states/missouri/counties/franklin-county/wheel-est-villa-ridge/)
-  - [Overview of Franklin County](states/missouri/counties/franklin-county/franklin-county.md)
+  - [Independence](states/missouri/independence)
+  - [Franklin County](states/missouri/counties/franklin-county)
+  - [St. Louis County](states/missouri/counties/st-louis-county)
 [End[Missouri]]
 
+[Section[Mississippi]]
 ### Mississippi
-- **Madison County**
-  - [Al Caldwell Rd, Canton](states/mississippi/counties/madison-county/al-caldwell-rd-canton/)
-  - [West Dinkins St, Canton](states/mississippi/counties/madison-county/west-dinkins-st-canton/)
-  - [Overview of Madison County](states/mississippi/counties/madison-county/madison-county.md)
+  - [Madison County](states/mississippi/counties/madison-county)
+[End[Mississippi]]
 
+[Section[Tennessee]]
 ### Tennessee
-- **Shelby County**
-  - [0 Chandler St, Memphis](states/tennessee/counties/shelby-county/0-chandler-st-memphis/)
-  - [Overview of Shelby County](states/tennessee/counties/shelby-county/shelby-county.md)
-
-For more details on each lot, please refer to the respective links.
+  - [Memphis](states/tennessee/counties/memphis)
+[End[Tennessee]]
 

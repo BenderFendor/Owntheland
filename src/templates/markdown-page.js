@@ -33,15 +33,17 @@ export default function MarkdownPage({ data }) {
             .map((section) => `<div class="countylots">${section}</div>`)
             .join("");
     }
+    if (frontmatter.level === "lots") {
+      replacedHtml = `<h1>${frontmatter.title}</h1>` + replacedHtml
+          .split(/---/)
+          .map((section) => section.trim())
+          .filter((section) => section.length > 0)
+          .map((section) => `<div class="states">${section}</div>`)
+          .join("");
+  }
     return (
         <Layout>
-        <div >
-        <div
-        className={frontmatter.level ? frontmatter.level.toLowerCase() : ""}
-        dangerouslySetInnerHTML={{ __html: replacedHtml }}
-        style={{ position: "relative", zIndex: 1 }}
-            />
-        </div>
+        <div className={frontmatter.level ? frontmatter.level.toLowerCase() : ''} dangerouslySetInnerHTML={{ __html: replacedHtml }} />
         </Layout>
     );
 }

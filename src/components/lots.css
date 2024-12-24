@@ -1,23 +1,74 @@
-body {
-    height: 100vh;
-    margin: 0;
-    color: #fff;
-    font-family: 'EB Garamond', sans-serif;
-    background-image: url('../images/lotbackground.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-} 
+.lots {
+    body {
+        height: 100vh;
+        margin: 0;
+        font-family: 'EB Garamond', sans-serif;
+        background-image: url('../images/lotbackground.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
 
-.pennsylvania {
-    background-image: url('../images/pa.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-    color: #fff;
-    font-size: 2em;
-    text-align: center;
-    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    .states {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 1em;
+        margin: 1em 0;
+    }
+
+    .pennsylvania, .missouri, .mississippi, .tennessee {
+        background-color: #fff;
+        color: #333;
+        border-radius: 8px;
+        padding: 2em;
+        margin: 2em;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        width: calc(50% - 4em);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .pennsylvania:hover, .missouri:hover, .mississippi:hover, .tennessee:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    h1, h2 {
+        text-align: center;
+        color: #333;
+        margin: 1em 0;
+    }
+
+    h3 {
+        color: #333;
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: #3a3a3a;
+        text-decoration: none;
+        font-size: 1.1em;
+        padding: 0.5em 1em;
+        display: block;
+        border-radius: 8px;
+        text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    strong {
+        display: block;
+        margin-top: 1em;
+        font-size: 1.2em;
+        color: #e2e2e2;
+    }
 }
