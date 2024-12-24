@@ -3,7 +3,6 @@ slug: "/lots"
 title: "My Page Title"
 date: "2024-01-01"
 level: "lots"
-background: "../images/lotbackground.png"
 ---
 
 # Available Lots
@@ -18,13 +17,13 @@ background: "../images/lotbackground.png"
   - [Wayne County](states/pennsylvania/counties/wayne-county)
 [End[PENNSYLVANIA]]
 
-[Section[PENNSYLVANIA]]
+[Section[Missouri]]
 ### Missouri
 - **Franklin County**
   - [Meadowview Dr, New Haven](states/missouri/counties/franklin-county/meadowview-dr-new-haven/)
   - [Wheel Est, Villa Ridge](states/missouri/counties/franklin-county/wheel-est-villa-ridge/)
   - [Overview of Franklin County](states/missouri/counties/franklin-county/franklin-county.md)
-[End[PENNSYLVANIA]]
+[End[Missouri]]
 
 ### Mississippi
 - **Madison County**
