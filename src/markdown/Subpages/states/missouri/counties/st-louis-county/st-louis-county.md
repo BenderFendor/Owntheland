@@ -6,7 +6,7 @@ level: "level2"
 ---
 
 [Section[property]]
-![8001-Gardner-Lane](src/images/MO St Louis Co Gardner location in relation to the city.jpg)
+![8001 Gardner Lane](src/images/MO StLouisCo  Gardner 4.jpg)
 ## [8001 Gardner Lane](8001-gardner-lane/)
 
 [End[property]]

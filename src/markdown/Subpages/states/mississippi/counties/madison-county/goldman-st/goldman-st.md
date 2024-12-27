@@ -14,7 +14,7 @@ level: "level3"
 # Property
 
 ![](src/images/Ms Madison  Goldman property 1 number 1.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc]Goldman property number 1]
 
 ![](src/images/Ms Madison Goldman 436-2.jpg)
 [[ImageDesc]This is a photo of the property]
@@ -35,13 +35,13 @@ level: "level3"
 [[ImageDesc]This is a photo of the property]
 
 ![](src/images/MS Madison goldman down goldman farther to the right.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc]Down Goldman Street farther to the right]
 
 ![](src/images/Ms Madison Goldman end of the street.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc]End of Goldman Street]
 
 ![](src/images/Ms Madison Goldman houses beyond the prop to props right.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc]Houses beyond the property to property's right]
 
 ![](src/images/Ms Madison Goldman IMG_0437-2.jpg)
 [[ImageDesc]This is a photo of the property]
@@ -77,10 +77,10 @@ level: "level3"
 [[ImageDesc]This is a photo of the property]
 
 ![](src/images/MS Madison Goldmanbeyond last shot.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc]Beyond the last property on Goldman]
 
 ![](src/images/Ms Madison view across Goldman with prop at left.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc]View across Goldman with property at left]
 
 [End[Property]]
 

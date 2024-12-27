@@ -156,3 +156,12 @@ So for the level 4 JavaScript, I want it to take the image and then when you cli
 
 
 # Get the level 3 page to have the mainimage have it's description visable under it on the main page
+
+
+# make darby for wayne and fix 717 n wills ave
+
+# add logic if there is only one property for the property page
+to style it so that its not like 1000 px wide
+
+st louis county for example
+try and use css only logic for that.

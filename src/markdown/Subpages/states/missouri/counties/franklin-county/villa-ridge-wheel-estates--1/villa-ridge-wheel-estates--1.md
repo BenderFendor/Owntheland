@@ -25,5 +25,8 @@ level: "level3"
 ![](src/images/Untitled-16-Recovered.jpg)
 [[ImageDesc]This is a photo of the property]
 
+![](src/images/Franklin VillaRidge2 acreage 22  aerial  map.jpg)
+[[ImageDesc]This is an image of the property]
+
 [End[Property]]
 

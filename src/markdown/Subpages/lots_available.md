@@ -27,6 +27,6 @@ level: "lots"
 
 [Section[Tennessee]]
 ### Tennessee
-  - [Memphis](states/tennessee/counties/memphis)
+  - [Memphis](states/tennessee/counties/shelby-county-memphis)
 [End[Tennessee]]
 
