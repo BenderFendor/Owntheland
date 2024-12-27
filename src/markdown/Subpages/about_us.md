@@ -1,19 +1,14 @@
 ---
-slug: "/your-slug"
-title: "Your Title"
+slug: "/about"
+title: "About me"
 date: "2024-01-01"
-level: "your-level"
+level: "infopage"
 ---
 
-# FILE: /markdown/markdown/Subpages/about_us.md
+[Section[MainInfo]]
+# About Me.
 
-# About Us
+Sylvia Castellanos, originally from Cuba, holds a graduate degree from Princeton University. This website is dedicated to helping individuals buy land and understand the importance of land ownership. Sylvia's goal is to provide resources and guidance for those interested in purchasing and managing land sustainably.
 
-## Mission
-Our mission is to provide quality properties and lots to our clients, ensuring a seamless and transparent purchasing experience.
+[End[MainInfo]]
 
-## Vision
-We envision a future where everyone has access to their dream property, supported by comprehensive information and resources.
-
-## Background
-Founded with the goal of simplifying the real estate process, we have dedicated ourselves to serving our community by offering a diverse range of properties across various states. Our team is committed to providing exceptional service and expertise to help you find the perfect lot for your needs.
