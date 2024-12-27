@@ -81,7 +81,7 @@
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* Modal styles */
+/* Modal styles aka level 4 aka the zoom in feature */
 .modal {
     position: fixed;
     top: 0;

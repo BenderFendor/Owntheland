@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/layout";
+// import Layout from "../components/layout";
 
 export default function MarkdownPage({ data }) {
     const { markdownRemark } = data;
@@ -31,10 +31,10 @@ export default function MarkdownPage({ data }) {
     // Base transformations for all pages
     replacedHtml = replacedHtml
         // Handle basic section syntax
-        .replace(/\[Section\[(.*?)\]\]/g, (match, p1) => `<div class="${p1.toLowerCase()}">`)
+        .replace(/\[Section\[(.*?)\]\]/g, (_, p1) => `<div class="${p1.toLowerCase()}">`)
         .replace(/\[End\[(.*?)\]\]/g, "</div>")
         // Basic image handling
-        .replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
+        .replace(/!\[(.*?)\]\((.*?)\)/g, (_, alt, src) => {
             const filename = src.split('/').pop();
             const newSrc = `/images/${filename}`;
             return `<img src="${newSrc}" alt="${alt || filename}" />`;
@@ -44,7 +44,7 @@ export default function MarkdownPage({ data }) {
     if (frontmatter.level === "level3") {
         replacedHtml = replacedHtml
             // Handle image descriptions for level3
-            .replace(/\[\[ImageDesc\](.*?)\]/g, (match, p1) => 
+            .replace(/\[\[ImageDesc\](.*?)\]/g, (_, p1) =>
                 `<span class="image-desc" data-description="${p1}"></span>`)
             // Enhanced image handling with descriptions
             .replace(/<img[^>]+>/g, (match) => {
@@ -64,17 +64,13 @@ export default function MarkdownPage({ data }) {
                     return match.replace('</div>', `<p class="mainimage-description">${descMatch[1]}</p></div>`);
                 }
                 return match;
-            });
-
-    //    console.log("Before Property/Neighborhood replacement:", replacedHtml); // Inspect the HTML
-
-        replacedHtml = replacedHtml
-            // Special handling for Property and Neighborhood sections
+            })
+            // Special handling for Property and Neighborhood sections (pairs)
             .replace(/<p>(<div class="property">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>|<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="property">[\s\S]*?<\/div>)<\/p>/g,
-                (match, propertyFirst, neighborhoodSecond, neighborhoodFirst, propertySecond) => {
+                (_, propertyFirst, neighborhoodSecond, neighborhoodFirst, propertySecond) => {
                     let propertyContent = propertyFirst || propertySecond;
                     let neighborhoodContent = neighborhoodSecond || neighborhoodFirst;
-            
+
                     const processSection = (content, className) => {
                         if (!content) return '';
                         const heading = content.match(/<h1>.*?<\/h1>/)?.[0] || '';
@@ -84,81 +80,79 @@ export default function MarkdownPage({ data }) {
                             <div class="image-grid">${images}</div>
                         </div>`;
                     };
-            
+
                     const propertySection = processSection(propertyContent, 'property');
                     const neighborhoodSection = processSection(neighborhoodContent, 'neighborhood');
-            
+
                     return `<div class="right-section">
                         ${propertySection}
                         ${neighborhoodSection}
                     </div>`;
-                });
+                })
+            // Handle lone Property and Neighborhood sections
+            .replace(/<p>(<div class="property">[\s\S]*?<\/div>)<\/p>|<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>/g, (match, propertyDiv, neighborhoodDiv) => {
+                const processSection = (content, className) => {
+                    if (!content) return '';
+                    const heading = content.match(/<h1>.*?<\/h1>/)?.[0] || '';
+                    const images = (content.match(/<img[^>]+>/g) || []).join('\n');
+                    return `<div class="${className}">
+                        ${heading}
+                        <div class="image-grid">${images}</div>
+                    </div>`;
+                };
 
-        // onsole.log("After Property/Neighborhood replacement:", replacedHtml); // See the result
+                if (propertyDiv) {
+                    return `<div class="right-section">${processSection(propertyDiv, 'property')}</div>`;
+                } else if (neighborhoodDiv) {
+                    return `<div class="right-section">${processSection(neighborhoodDiv, 'neighborhood')}</div>`;
+                }
+                return match; // Should not happen
+            });
+    }
 
-    } else if (frontmatter.level === "level2") {
-        replacedHtml = `<h1>${frontmatter.title}</h1>` + 
-            replacedHtml
-                .split(/---/)
-                .map(section => section.trim())
-                .filter(section => section.length > 0)
-                .map(section => section.replace(/<p>\s*<\/p>/g, ''))
-                .map(section => `<div class="countylots">${section}</div>`)
-                .join("");
+    function expandImage(src, desc) {
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close" onclick="this.parentElement.parentElement.remove()">×</span>
+                <img src="${src}" alt="${desc}">
+                <p class="modal-desc">${desc}</p>
+            </div>
+        `;
+        document.body.appendChild(modal);
 
-    } else if (frontmatter.level === "lots") {
-        replacedHtml = `<h1>${frontmatter.title}</h1>` + 
-            replacedHtml
-                .split(/---/)
-                .map(section => section.trim())
-                .filter(section => section.length > 0)
-                .map(section => `<div class="states">${section}</div>`)
-                .join("");
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.remove();
+        });
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function closeOnEscape(e) {
+            if (e.key === 'Escape') {
+                modal.remove();
+                // Remove the event listener when modal is closed
+                document.removeEventListener('keydown', closeOnEscape);
+            }
+        });
     }
 
     return (
-        <Layout>
-            <div className={frontmatter.level ? frontmatter.level.toLowerCase() : ''} 
+        // <Layout> {/* You commented out Layout, ensure this is intentional */}
+            <div className={frontmatter.level ? frontmatter.level.toLowerCase() : ''}
                  dangerouslySetInnerHTML={{ __html: replacedHtml }} />
-        </Layout>
+        // </Layout>
     );
 }
 
-function expandImage(src, desc) {
-    const modal = document.createElement('div');
-    modal.className = 'modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
-            <img src="${src}" alt="${desc}">
-            <p class="modal-desc">${desc}</p>
-        </div>
-    `;
-    document.body.appendChild(modal);
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.remove();
-    });
-
-    // Close modal when pressing Escape key
-    document.addEventListener('keydown', function closeOnEscape(e) {
-        if (e.key === 'Escape') {
-            modal.remove();
-            // Remove the event listener when modal is closed
-            document.removeEventListener('keydown', closeOnEscape);
-        }
-    });
-}
-
 export const pageQuery = graphql`
-query ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-        html
-        frontmatter {
-        title
-        date
-        level
+    query ($id: String!) {
+        markdownRemark(id: { eq: $id }) {
+            html
+            frontmatter {
+                title
+                date
+                level
+            }
         }
     }
-}
 `;
