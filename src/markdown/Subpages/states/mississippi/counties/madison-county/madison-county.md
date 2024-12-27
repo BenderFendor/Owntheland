@@ -1,10 +1,16 @@
 ---
-slug: "/your-slug"
-title: "Your Title"
-date: "2024-01-01"
-level: "your-level"
+slug: "lots/states/mississippi/counties/madison-county/"
+title: "Madison County County"
+date: "2024-12-27"
+level: "level2"
 ---
 
-# FILE: /markdown/markdown/Subpages/states/mississippi/counties/madison-county/madison-county.md
+[Section[property]]
+![Goldman-st](src/images/Ms Madison  Goldman going back toward 110 Goldman.jpg)
+## [Goldman St](goldman-st/)
 
-This file is intentionally left blank.
+![West-Dinkins-St](src/images/MS Dinkins 0444.HEIC)
+## [West Dinkins St](west-dinkins-st/)
+
+[End[property]]
+
