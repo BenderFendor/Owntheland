@@ -6,20 +6,25 @@ level: "level2"
 ---
 
 [Section[property]]
-![](Lac Lyman Ln Screenshot 131420.jpg)
-## [Lyman Ln, Gouldsboro, PA, 18424](lymanland/)
-2 contiguous properties total acreage 1.04 acres
-[End[property]]
-
-[Section[property]]
-![](https://owntheland.net/wp-content/uploads/2024/11/JacksonCo-Crisp-5-lot-from-E-6th-st-3.jpg)
-## HILLDELL RD, Moscow
+![](Lac Drinker Tpk seems to be prop.jpg)
+## [1114 Drinker Tnpk, Moscow](drinkertnpk/)
 acreage 0.92 acre
 [End[property]]
 
 [Section[property]]
-![](https://owntheland.net/wp-content/uploads/2024/11/JacksonCo-Independence-7-aerial.jpg0)
-## 9605 E. Independence Ave., Independence, MO 64053
-acreage 0.3 acre  
-parcel number: 27-210-02-28-01-0-00-000
-[End[property]] 
+![](Lac Hilldell Rd Screenshot 2024-10-29 133321.jpg)
+## [Hilldell Rd, Moscow](hilldellrd/)
+acreage 0.92 acre
+[End[property]]
+
+[Section[property]]
+![](Lac Langan Rd view of lot 2.jpg)
+## [Langan Rd, Moscow](langanrd/)
+acreage 0.92 acre
+[End[property]]
+
+[Section[property]]
+![](Lac Lyman Ln Screenshot 131420.jpg)
+## [Lyman Ln, Gouldsboro, PA, 18424](lymanlane/)
+2 contiguous properties total acreage 1.04 acres
+[End[property]]

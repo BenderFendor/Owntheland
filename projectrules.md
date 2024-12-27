@@ -114,13 +114,15 @@ background: "../images/lotbackground.png"
 ```
 
 # Syntax 
-**markdown extend**
+**Markdown extended**
 
-To start a section you do this
+To start a section you do this:
 [Section[PENNSYLVANIA]]
 
-To end a section you do this
+To end a section you do this:
+[End[PENNSYLVANIA]]
 
-[End[[[PENNSYLVANIA]]]]
+You need [Section[X]] to start and [End[X]] to end, and that is the only way for that to be parsed as a section. Other than that, like [God] isn't a section/div thing.
 
-You need like [Section[X]] to start and [End[X]] to end and that is the only way for that to be parse as a section other then that like [God] isn't a section / like div thing
+To add image descriptions, use: This only works for level3 pages
+[[ImageDesc]This is the description of the image]

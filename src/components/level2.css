@@ -1,22 +1,33 @@
 .level2 {
     .countylots {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
+        display: grid;
+        /* Auto-fit columns with equal minimum width */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2em;
         padding: 1em;
-        margin: 1em 0;
+        margin: 10em 0;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        /* Allow items to wrap naturally */
+        grid-auto-flow: row;
     }
-
+    .countylots p {
+        display: none;
+    }
+    .countylots .property p 
+    {
+        display: block;
+    }
     .property {
         background-color: #fff;
         color: black;
-        margin: 3em 0;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        width: 30em;
+        /* Remove fixed width to allow grid layout to control size */
+        width: 100%;
+        /* Prevent margin from breaking grid layout */
+        margin: 0;
     }
 
     img {

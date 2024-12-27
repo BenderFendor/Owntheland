@@ -1,51 +1,52 @@
 ---
-slug: "lots/states/pennsylvania/counties/lackawanna-county/lyman"
-title: "My Page Title"
+slug: "lots/states/pennsylvania/counties/lackawanna-county/lymanlane"
+title: "Lyman Lane Gouldsboro"
 date: "2024-01-01"
 level: "level3"
 ---
 
 [Section[MainImage]]
-![](src/markdown/Subpages/states/pennsylvania/counties/lackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 131420.jpg)
+![](src/images/Lac Lyman Ln Screenshot 131420.jpg)
 [[ImageDesc]This is an aerial screenshot of the property]
 [End[Mainimage]]
 
 [Section[Property]]
 # Property
 
-![](src/markdown/Subpages/states/pennsylvania/counties/lackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Big Bass Lake and the property.jpg)
+![](src/images/Lac Lyman Ln Big Bass Lake and the property.jpg)
 [[ImageDesc]This is a photo of the Big Bass Lake and the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln screenshot 131159.jpg)
+![](src/images/Lac Lyman Ln screenshot  131159.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 125306.jpg)
+![](src/images/Lac Lyman Ln Screenshot 125306.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 125355.jpg)
+![](src/images/Lac Lyman Ln Screenshot 125355.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 130205.jpg)
+![](src/images/Lac Lyman Ln Screenshot 130205.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 130254.jpg)
+![](src/images/Lac Lyman Ln Screenshot 130254.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 130355.jpg)
+![](src/images/Lac Lyman Ln Screenshot 130355.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 130447.jpg)
+![](src/images/Lac Lyman Ln Screenshot 130447.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 130824.jpg)
+![](src/images/Lac Lyman Ln Screenshot 130824.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 131044.jpg)
+![](src/images/Lac Lyman Ln Screenshot 131044.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 131232.jpg)
+![](src/images/Lac Lyman Ln Screenshot 131232.jpg)
 [[ImageDesc]This is an screenshot of the property]
 
-![](src/markdown/Subpages/states/pennsylvania/counties/llackawanna-county/Lyman Lane Gouldsboro/Lac Lyman Ln Screenshot 131325.jpg)
+![](src/images/Lac Lyman Ln Screenshot 131325.jpg)
 [[ImageDesc]This is an screenshot of the property]
-[end[Property]]
+
+[End[Property]]
