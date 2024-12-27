@@ -53,19 +53,30 @@ export default function MarkdownPage({ data }) {
                 const src = srcMatch ? srcMatch[1] : '';
                 const alt = altMatch ? altMatch[1] : '';
                 
-                // Keep the original filename; only adjust the path to /images/
-                let normalizedSrc = src.startsWith('src/images/')
-                    ? src.replace('src/images/', '/images/')
+                // Keep original path structure
+                let normalizedSrc = src.startsWith('src/images/') 
+                    ? src.replace('src/images/', '/images/') 
                     : src;
                 
-                // Use alt as the default description
-                let desc = alt;
+                let desc = alt; // Default to alt text
                 
                 try {
-                    // Look for any matching ImageDesc near this image if desired
-                    // Currently, it looks in the entire HTML; consider scoping if needed.
+                    // Find the image in the original markdown
+                    const filename = src.split('/').pop();
+                    const safeFilename = filename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    
+                    // Look for ImageDesc tag after this specific image
+                    const imgDescPattern = new RegExp(
+                        `!\\[.*?\\]\\([^)]*?${safeFilename}[^)]*?\\)\\s*\\[\\[ImageDesc\\]([^\\]]+)\\]`,
+                        'i'
+                    );
+                    
+                    const descMatch = html.match(imgDescPattern);
+                    if (descMatch && descMatch[1]) {
+                        desc = descMatch[1].trim();
+                    }
                 } catch (error) {
-                    console.warn(`Error processing image:`, error);
+                    console.warn(`Error finding description for ${src}:`, error);
                 }
                 
                 const escapedSrc = normalizedSrc.replace(/"/g, '&quot;');
