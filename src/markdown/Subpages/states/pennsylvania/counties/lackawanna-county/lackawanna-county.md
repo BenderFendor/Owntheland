@@ -6,8 +6,8 @@ level: "level2"
 ---
 
 [Section[property]]
-![](https://owntheland.net/wp-content/uploads/2024/11/JacksonCo-Willis-8.jpg)
-## [Lyman Ln, Gouldsboro, PA, 18424](lyman/)
+![](Lac Lyman Ln Screenshot 131420.jpg)
+## [Lyman Ln, Gouldsboro, PA, 18424](lymanland/)
 2 contiguous properties total acreage 1.04 acres
 [End[property]]
 
@@ -18,8 +18,8 @@ acreage 0.92 acre
 [End[property]]
 
 [Section[property]]
-![](https://owntheland.net/wp-content/uploads/2024/11/JacksonCo-Independence-7-aerial.jpg)
+![](https://owntheland.net/wp-content/uploads/2024/11/JacksonCo-Independence-7-aerial.jpg0)
 ## 9605 E. Independence Ave., Independence, MO 64053
 acreage 0.3 acre  
 parcel number: 27-210-02-28-01-0-00-000
-[End[property]]
+[End[property]] 
