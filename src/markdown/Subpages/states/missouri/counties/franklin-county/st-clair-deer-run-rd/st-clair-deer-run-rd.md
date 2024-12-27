@@ -6,15 +6,12 @@ level: "level3"
 ---
 
 [Section[MainImage]]
-![](src/images/Franklin Co St Clair MG_20241123_161121539 (1).jpg)
+![](src/images/Franklin Co St Clair MG_20241123_161121539.jpg)
 [[ImageDesc]This is an image of the property]
 [End[Mainimage]]
 
 [Section[Property]]
 # Property
-
-![](src/images/Franklin Co St ClairIMG_20241123_160753916 (1).jpg)
-[[ImageDesc]This is a photo of the property]
 
 ![](src/images/Franklin County St Clair Deer Run aerial.jpg)
 [[ImageDesc]This is a photo of the property]
@@ -25,7 +22,7 @@ level: "level3"
 ![](src/images/IMG_20241123_160641204.jpg)
 [[ImageDesc]This is a photo of the property]
 
-![](src/images/IMG_20241123_160747250_HDR (2).jpg)
+![](src/images/IMG_20241123_160747250_HDR.jpg)
 [[ImageDesc]This is a photo of the property]
 
 ![](src/images/IMG_20241123_160805662_HDR.jpg)

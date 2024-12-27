@@ -52,9 +52,26 @@ export default function MarkdownPage({ data }) {
                 const altMatch = match.match(/alt="([^"]+)"/);
                 const src = srcMatch ? srcMatch[1] : '';
                 const alt = altMatch ? altMatch[1] : '';
-                const descMatch = html.match(new RegExp(`!\\[.*?\\]\\(.*?${src.split('/').pop()}\\)\\s*\\[\\[ImageDesc\\](.*?)\\]`));
-                const desc = descMatch ? descMatch[1] : alt;
-                return `<img src="${src}" alt="${desc}" class="thumbnail" data-description="${desc}" onclick="expandImage('${src}', '${desc}')" />`;
+                
+                // Keep the original filename; only adjust the path to /images/
+                let normalizedSrc = src.startsWith('src/images/')
+                    ? src.replace('src/images/', '/images/')
+                    : src;
+                
+                // Use alt as the default description
+                let desc = alt;
+                
+                try {
+                    // Look for any matching ImageDesc near this image if desired
+                    // Currently, it looks in the entire HTML; consider scoping if needed.
+                } catch (error) {
+                    console.warn(`Error processing image:`, error);
+                }
+                
+                const escapedSrc = normalizedSrc.replace(/"/g, '&quot;');
+                const escapedDesc = desc.replace(/"/g, '&quot;');
+                
+                return `<img src="${escapedSrc}" alt="${escapedDesc}" class="thumbnail" data-description="${escapedDesc}" onclick="expandImage('${escapedSrc}', '${escapedDesc}')" />`;
             })
             // Handle MainImage section
             .replace(/(<div class="mainimage">[\s\S]*?<\/div>)/g, (match) => {
@@ -108,36 +125,6 @@ export default function MarkdownPage({ data }) {
                 }
                 return match;
             });
-
-    //    console.log("Before Property/Neighborhood replacement:", replacedHtml); // Inspect the HTML
-
-        replacedHtml = replacedHtml
-            // Special handling for Property and Neighborhood sections
-            .replace(/<p>(<div class="property">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>|<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="property">[\s\S]*?<\/div>)<\/p>/g,
-                (match, propertyFirst, neighborhoodSecond, neighborhoodFirst, propertySecond) => {
-                    let propertyContent = propertyFirst || propertySecond;
-                    let neighborhoodContent = neighborhoodSecond || neighborhoodFirst;
-            
-                    const processSection = (content, className) => {
-                        if (!content) return '';
-                        const heading = content.match(/<h1>.*?<\/h1>/)?.[0] || '';
-                        const images = (content.match(/<img[^>]+>/g) || []).join('\n');
-                        return `<div class="${className}">
-                            ${heading}
-                            <div class="image-grid">${images}</div>
-                        </div>`;
-                    };
-            
-                    const propertySection = processSection(propertyContent, 'property');
-                    const neighborhoodSection = processSection(neighborhoodContent, 'neighborhood');
-            
-                    return `<div class="right-section">
-                        ${propertySection}
-                        ${neighborhoodSection}
-                    </div>`;
-                });
-
-        // onsole.log("After Property/Neighborhood replacement:", replacedHtml); // See the result
 
     } else if (frontmatter.level === "level2") {
         replacedHtml = `<h1>${frontmatter.title}</h1>` + 
