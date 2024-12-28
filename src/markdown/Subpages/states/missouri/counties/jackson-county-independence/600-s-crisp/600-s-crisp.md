@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/Lev 4 MO JacksonCo 600 Crisp 6th st headed toward intersection with Crisp.jpg)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc]]
 [End[MainImage]]
 
 [Section[Property]]

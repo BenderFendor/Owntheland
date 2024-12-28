@@ -4,9 +4,8 @@ title: "Financing"
 date: "2024-01-01"
 level: "infomation"
 ---
-
-[Section[MainInfo]]
 # Financing
+[Section[MainInfo]]
 
 If you would like to talk about financing, please contact Sylvia Castellanos directly.
 

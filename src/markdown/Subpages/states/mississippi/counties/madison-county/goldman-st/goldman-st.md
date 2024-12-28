@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/Ms Madison  Goldman going back toward 110 Goldman.jpg)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc]]
 [End[Mainimage]]
 
 [Section[Property]]

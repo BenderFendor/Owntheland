@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/MS Dinkins 0444.HEIC)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc]]
 [End[Mainimage]]
 
 [Section[Property]]

@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/Mo Jackson co IMG_20241203_141724.jpg)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc] ]
 [End[MainImage]]
 
 [Section[Property]]
@@ -26,9 +26,6 @@ level: "level3"
 [[ImageDesc]Willis Ave property]
 
 ![](src/images/MO JacksonCo Indepdencence Willis IMG_20241203_141905_BURST004.jpg)
-[[ImageDesc]Willis Ave property]
-
-![](src/images/MO JacksonCo Indepdencence Willis IMG_20241205_155255 (1).jpg)
 [[ImageDesc]Willis Ave property]
 
 ![](src/images/MO JacksonCo Indepdencence Willis IMG_20241205_155255.jpg)

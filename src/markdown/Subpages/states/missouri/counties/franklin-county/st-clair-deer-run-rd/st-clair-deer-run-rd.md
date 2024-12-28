@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/Franklin Co St Clair MG_20241123_161121539.jpg)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc]]
 [End[Mainimage]]
 
 [Section[Property]]

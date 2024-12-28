@@ -4,9 +4,8 @@ title: "Contact"
 date: "2024-01-01"
 level: "infomation"
 ---
-
-[Section[MainInfo]]
 # Contact Us
+[Section[MainInfo]]
 
 If you want to buy land, feel free to make inquiries about prices, availability, etc. Or just drop Sylvia Castellanos a line. She would love to hear from you.
 

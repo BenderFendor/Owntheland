@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/Franklin Co New Haven 1.jpg)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc]]
 [End[Mainimage]]
 
 [Section[Property]]

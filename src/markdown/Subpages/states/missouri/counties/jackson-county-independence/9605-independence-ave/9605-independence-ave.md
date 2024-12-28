@@ -7,7 +7,7 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/Jackson Co Independence 1 corner of arlington and Independence see prop.jpg)
-[[ImageDesc]This is an image of the property]
+[[ImageDesc]]
 [End[MainImage]]
 
 [Section[Property]]
