@@ -2,7 +2,7 @@
 slug: "/about"
 title: "About Us – Own The Land"
 date: "2024-01-01"
-level: "about"
+level: "infomation"
 ---
 
 # About Own The Land

@@ -158,10 +158,10 @@ export default function MarkdownPage({ data }) {
     }
 
     return (
-        <Layout>
+        <Layout frontmatter={frontmatter}>
             <div className={frontmatter.level ? frontmatter.level.toLowerCase() : ''} 
-                 dangerouslySetInnerHTML={{ __html: replacedHtml }} />
-        </Layout>
+                dangerouslySetInnerHTML={{ __html: replacedHtml }} />
+         </Layout>
     );
 }
 
@@ -199,6 +199,7 @@ query ($id: String!) {
         title
         date
         level
+        background
         }
     }
 }

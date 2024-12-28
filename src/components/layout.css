@@ -42,6 +42,11 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-image: url(../images/lotbackground.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 nav ul {

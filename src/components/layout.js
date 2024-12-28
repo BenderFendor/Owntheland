@@ -1,11 +1,11 @@
-// filepath: /c:/Users/jorda/Documents/Owntheland/gatsby-project/src/components/layout.js
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import "./layout.css"
-import { useStaticQuery, graphql } from "gatsby"
-import ReactMarkdown from "react-markdown" // Add this import
+import ReactMarkdown from "react-markdown"
 
-const Layout = ({ children }) => {
+// So This is the part of the code does the header and the background part of the markdown files also the universal css
+
+const Layout = ({ children, frontmatter }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "header.md" }) {
@@ -17,9 +17,25 @@ const Layout = ({ children }) => {
   `)
 
   const headerContent = data.file.childMarkdownRemark.rawMarkdownBody
+  
+  // Add console logging for background detection
+  // console.log('Frontmatter detected:', frontmatter);
+  // if (frontmatter?.background) {
+  //   console.log('Background image URL:', frontmatter.background);
+  // }
+
+  const backgroundStyle = frontmatter?.background ? {
+    backgroundImage: `url(${frontmatter.background})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    height: '100vh', // Ensure height is a string
+  } : {};
+
+  console.log("Background style:", backgroundStyle);
 
   return (
-    <div>
+    <div style={backgroundStyle}>
       <header>
         <nav>
           <ReactMarkdown
