@@ -6,11 +6,13 @@ level: "level2"
 ---
 
 [Section[property]]
+![Silas](src/images/placeholder photo.jpg)
 ## [3602 & 3588 Silas](silas/)
 Parcel Numbers: 07509000000330 & 07509000000340 (adjacent)
 [End[property]]
 
 [Section[property]]
+![0 Chandler St](src/images/placeholder photo.jpg)
 ## [2505 Bridgeport Dr](bridgeport/)
 Parcel Number: 06014800000050
 Acreage: 0.57

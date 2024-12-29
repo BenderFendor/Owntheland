@@ -45,13 +45,24 @@
         margin-top: 1em;
         text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
     }
-
+    a {
+        margin: 0.5em 0;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+    a:hover {
+        color: rgb(81, 189, 74);
+    }
     h2 {
         font-size: 1.5em;
         margin: 0.5em 0;
         padding: 0 1em;
     }
-
+    h4 {
+        font-size: 1.1em;
+        margin: 0.5em 0;
+        padding: 0 1em;
+    }
     p {
         padding: 0 1em;
         margin: 0.5em 0;

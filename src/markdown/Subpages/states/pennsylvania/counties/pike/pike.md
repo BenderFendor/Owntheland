@@ -6,14 +6,18 @@ level: "level2"
 ---
 
 [Section[property]]
-![Bartlett](src/images/Pike Co Bartlett Screenshot  091018.jpg)
-## [Bartlett](bartlett/)
-acreage 0.92 acre
+![Bartlett Drive, Dingmans Ferry,PA 18328](src/images/Pike Co Bartlett Screenshot  091018.jpg)
+## [Bartlett Drive, Dingman's Ferry,PA, 18328](bartlett/)
+**Conashaugh Lakes Community Assocation**
+
+**Acreage**: 1.16 acres
 [End[property]]
 
 [Section[property]]
 ![Cowan-Rd](src/images/PIKE Co Cowaw 5.jpg)
-## [Cowan Rd](cowan-rd/)
-acreage 0.92 acre
+## [Cowaw Rd,Milford,PA,18337](cowan-rd/)
+**Conashaugh Lakes Community Assocation**
+
+**Acreage**: 1.28 acres
 [End[property]]
 
