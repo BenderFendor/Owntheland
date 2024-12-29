@@ -38,10 +38,10 @@ level: "level3"
 [[ImageDesc]PIKECo Cowaw2]
 
 ![](src/images/Screenshot 2024-10-28 083656.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Screenshot 2024-10-28 084802.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 [End[Property]]
 

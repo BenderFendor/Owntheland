@@ -20,7 +20,7 @@ level: "level3"
 [[ImageDesc]Location within map of Independence]
 
 ![](src/images/Screenshot 2024-12-15 100049.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 [End[Property]]
 

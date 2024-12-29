@@ -6,9 +6,9 @@ level: "level3"
 ---
 
 [Section[MainImage]]
-![](src/images/MS Dinkins 0444.HEIC)
+![](src/images/MS Dinkins 0444.jpeg)
 [[ImageDesc]]
-[End[Mainimage]]
+[End[Mainimage] ]
 
 [Section[Property]]
 # Property
@@ -28,23 +28,23 @@ level: "level3"
 ![](src/images/MS Dinkins first cross street to the right on Dinkins.jpg)
 [[ImageDesc]First cross street to the right on Dinkins]
 
-![](src/images/MS Dinkins IMG_0443.HEIC)
-[[ImageDesc]This is a photo of the property]
+![](src/images/MS Dinkins IMG_0443.jpeg)
+[[ImageDesc] ]
 
 ![](src/images/MS Dinkins IMG_0443.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/MS Dinkins IMG_0445-2.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/MS Dinkins IMG_0445-3.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
-![](src/images/MS Dinkins IMG_0445.HEIC)
-[[ImageDesc]This is a photo of the property]
+![](src/images/MS Dinkins IMG_0445.jpeg)
+[[ImageDesc] ]
 
 ![](src/images/MS Dinkins IMG_0445.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/MS Dinkins prop is after the metal frame fence.jpg)
 [[ImageDesc]Property located after the metal frame fence]
@@ -62,13 +62,13 @@ level: "level3"
 [[ImageDesc]Two doors down from house on Union]
 
 ![](src/images/MS DinkinsIMG_0442 (1)-2.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
-![](src/images/MS DinkinsIMG_0442 (1).HEIC)
-[[ImageDesc]This is a photo of the property]
+![](src/images/MS DinkinsIMG_0442 (1).jpeg)
+[[ImageDesc] ]
 
 ![](src/images/MS DinkinsIMG_0442 (1).jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/MS Dinkinsview dinkins to the left.jpg)
 [[ImageDesc]View of Dinkins Street to the left]

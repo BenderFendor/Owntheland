@@ -89,10 +89,10 @@ level: "level3"
 [[ImageDesc]Willis Ave property]
 
 ![](src/images/Screenshot 2024-12-15 123152.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Screenshot 2024-12-15 123414.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Willis  shows utility pole 1.jpg)
 [[ImageDesc]Utility pole on Willis Ave]

@@ -31,7 +31,7 @@ level: "level3"
 [[ImageDesc]Property view from far left]
 
 ![](src/images/Screenshot 2024-11-10 065939.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/street dead ends at prop.jpg)
 [[ImageDesc]Street dead end at property]

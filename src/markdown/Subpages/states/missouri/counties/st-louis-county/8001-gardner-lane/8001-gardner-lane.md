@@ -53,7 +53,7 @@ level: "level3"
 [[ImageDesc]Gardner view of property]
 
 ![](src/images/Screenshot 2024-11-23 103024.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/StLouisCo Gardner 3.jpg)
 [[ImageDesc]Gardner property view 3]

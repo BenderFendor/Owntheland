@@ -44,7 +44,7 @@ level: "level3"
 [[ImageDesc]Property and street down from it]
 
 ![](src/images/Screenshot 2024-10-27 162741.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 [End[Property]]
 

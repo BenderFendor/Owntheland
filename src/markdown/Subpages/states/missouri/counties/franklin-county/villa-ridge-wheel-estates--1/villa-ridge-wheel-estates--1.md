@@ -14,16 +14,16 @@ level: "level3"
 # Property
 
 ![](src/images/Franklin Co Villa Ridge 3.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Franklin Co Villa Ridge acreage 28.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Franklin VillaRidge two props for sale.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Untitled-16-Recovered.jpg)
-[[ImageDesc]This is a photo of the property]
+[[ImageDesc] ]
 
 ![](src/images/Franklin VillaRidge2 acreage 22  aerial  map.jpg)
 [[ImageDesc]]
