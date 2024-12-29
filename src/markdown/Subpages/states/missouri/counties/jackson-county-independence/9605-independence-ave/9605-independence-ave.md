@@ -6,8 +6,8 @@ level: "level3"
 ---
 
 [Section[MainImage]]
-![](src/images/Jackson Co Independence 1 corner of arlington and Independence see prop.jpg)
-[[ImageDesc]]
+![](src/images/JacksonCo Independence 6 property.jpg)
+[[ImageDesc]The property at 9605 Independence Ave]
 [End[MainImage]]
 
 [Section[Property]]
@@ -28,14 +28,14 @@ level: "level3"
 ![](src/images/JacksonCo Independence 5 prop ar right.jpg)
 [[ImageDesc]Property at right]  
 
-![](src/images/JacksonCo Independence 6 property.jpg)
-[[ImageDesc]Property]
+![](src/images/JacksonCo Independence 8.jpg)
+[[ImageDesc]Google maps view of property]
+
+![](src/images/Jackson Co Independence 1 corner of arlington and Independence see prop.jpg)
+[[ImageDesc]Corner of Arlington and Independence]
 
 ![](src/images/JacksonCo Independence 7 aerial.jpg)
 [[ImageDesc]Aerial view of property]
-
-![](src/images/JacksonCo Independence 8.jpg)
-[[ImageDesc]Property]
 
 ![](src/images/JacksonCo Independence 9 aerial.jpg)
 [[ImageDesc]Aerial view of property]

@@ -16,9 +16,6 @@ level: "level3"
 ![](src/images/MO Jackson Co Independence Willis IMG_20241203_141737.jpg)
 [[ImageDesc]Willis Ave property]
 
-![](src/images/MO JacksonCo Indepdencence Willis  9 north of prop.jpg)
-[[ImageDesc]North of property]
-
 ![](src/images/MO JacksonCo Indepdencence Willis IMG_20241203_141810.jpg)
 [[ImageDesc]Willis Ave property]
 
@@ -76,6 +73,19 @@ level: "level3"
 ![](src/images/MO JacksonCo Independence Willis Dec 2023.jpg)
 [[ImageDesc]Willis Ave property]
 
+![](src/images/MO JacksonCo Independence Willis JacksonCo Willis 8.jpg)
+[[ImageDesc]Willis Ave property]
+
+![](src/images/Screenshot 2024-12-15 123152.jpg)
+[[ImageDesc] ]
+
+![](src/images/Screenshot 2024-12-15 123414.jpg)
+[[ImageDesc] ]
+[End[Property]]
+
+[Section[Neighborhood]]
+# Neighborhood
+
 ![](src/images/MO JacksonCo Independence Willis directly across the street.jpg)
 [[ImageDesc]Directly across the street]
 
@@ -85,17 +95,11 @@ level: "level3"
 ![](src/images/MO JacksonCo Independence Willis farther down willis.jpg)
 [[ImageDesc]Farther down Willis Ave]
 
-![](src/images/MO JacksonCo Independence Willis JacksonCo Willis 8.jpg)
-[[ImageDesc]Willis Ave property]
-
-![](src/images/Screenshot 2024-12-15 123152.jpg)
-[[ImageDesc] ]
-
-![](src/images/Screenshot 2024-12-15 123414.jpg)
-[[ImageDesc] ]
-
 ![](src/images/Willis  shows utility pole 1.jpg)
 [[ImageDesc]Utility pole on Willis Ave]
 
-[End[Property]]
+![](src/images/MO JacksonCo Indepdencence Willis  9 north of prop.jpg)
+[[ImageDesc]North of property]
 
+
+[End[Neighborhood]]
