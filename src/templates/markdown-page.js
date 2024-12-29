@@ -10,10 +10,10 @@ export default function MarkdownPage({ data }) {
         if (frontmatter.level) {
             import(`../components/${frontmatter.level.toLowerCase()}.css`)
                 .then(() => {
-                console.log(`${frontmatter.level} specific CSS loaded`);
+                    console.log(`${frontmatter.level} specific CSS loaded`);
                 })
                 .catch((err) => {
-                console.error(`Failed to load ${frontmatter.level} CSS`, err);
+                    console.error(`Failed to load ${frontmatter.level} CSS`, err);
                 });
         } else {
             console.log("No level specified");
@@ -40,37 +40,80 @@ export default function MarkdownPage({ data }) {
             return `<img src="${newSrc}" alt="${alt || filename}" />`;
         });
 
+        const videoDivStart = '<div class="video">';
+        const videoDivEnd = '</div>';
+
+       let videoStartIndex = replacedHtml.indexOf(videoDivStart);
+
+       while(videoStartIndex !== -1){
+           let videoEndIndex = replacedHtml.indexOf(videoDivEnd, videoStartIndex);
+           if(videoEndIndex === -1) break;
+
+            const videoDiv = replacedHtml.substring(videoStartIndex, videoEndIndex + videoDivEnd.length);
+
+            const aTagStart = '<a href="';
+           const aTagEnd = '">';
+
+            let aTagStartIndex = videoDiv.indexOf(aTagStart);
+
+           if (aTagStartIndex !== -1) {
+              let aTagEndIndex = videoDiv.indexOf(aTagEnd, aTagStartIndex);
+                if (aTagEndIndex !== -1) {
+
+                  const urlStartIndex = aTagStartIndex + aTagStart.length;
+                   const url = videoDiv.substring(urlStartIndex, aTagEndIndex);
+
+                if (url.includes("youtube.com/watch?v=")) {
+                     const videoId = url.split('v=')[1];
+                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                   console.log("embedUrl:", embedUrl);
+
+                     const replacement = `<div class="video-container"><iframe width="560" height="315" src="${embedUrl}" frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowfullscreen></iframe></div>`;
+
+                        replacedHtml = replacedHtml.substring(0, videoStartIndex) + replacement + replacedHtml.substring(videoEndIndex + videoDivEnd.length) ;
+                        videoStartIndex = replacedHtml.indexOf(videoDivStart);
+                        continue;
+                    }
+                }
+            }
+             videoStartIndex = replacedHtml.indexOf(videoDivStart, videoEndIndex + videoDivEnd.length);
+           }
+
+
     // Level-specific transformations
     if (frontmatter.level === "level3") {
         replacedHtml = replacedHtml
             // Handle image descriptions for level3
             .replace(/\[\[ImageDesc\](.*?)\]/g, (_, p1) =>
                 `<span class="image-desc" data-description="${p1}"></span>`)
+
             // Enhanced image handling with descriptions
             .replace(/<img[^>]+>/g, (match) => {
                 const srcMatch = match.match(/src="([^"]+)"/);
                 const altMatch = match.match(/alt="([^"]+)"/);
                 const src = srcMatch ? srcMatch[1] : '';
                 const alt = altMatch ? altMatch[1] : '';
-                
+
                 // Keep original path structure
-                let normalizedSrc = src.startsWith('src/images/') 
-                    ? src.replace('src/images/', '/images/') 
+                let normalizedSrc = src.startsWith('src/images/')
+                    ? src.replace('src/images/', '/images/')
                     : src;
-                
+
                 let desc = alt; // Default to alt text
-                
+
                 try {
                     // Find the image in the original markdown
                     const filename = src.split('/').pop();
                     const safeFilename = filename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                    
+
                     // Look for ImageDesc tag after this specific image
                     const imgDescPattern = new RegExp(
                         `!\\[.*?\\]\\([^)]*?${safeFilename}[^)]*?\\)\\s*\\[\\[ImageDesc\\]([^\\]]+)\\]`,
                         'i'
                     );
-                    
+
                     const descMatch = html.match(imgDescPattern);
                     if (descMatch && descMatch[1]) {
                         desc = descMatch[1].trim();
@@ -78,13 +121,13 @@ export default function MarkdownPage({ data }) {
                 } catch (error) {
                     console.warn(`Error finding description for ${src}:`, error);
                 }
-                
-                const escapedSrc = normalizedSrc.replace(/"/g, '&quot;');
-                const escapedDesc = desc.replace(/"/g, '&quot;');
-                
+
+                const escapedSrc = normalizedSrc.replace(/"/g, '"');
+                const escapedDesc = desc.replace(/"/g, '"');
+
                 return `<img src="${escapedSrc}" alt="${escapedDesc}" class="thumbnail" data-description="${escapedDesc}" onclick="expandImage('${escapedSrc}', '${escapedDesc}')" />`;
             })
-            // Handle MainImage section
+
             .replace(/(<div class="mainimage">[\s\S]*?<\/div>)/g, (match) => {
                 const imgMatch = match.match(/<img[^>]+>/);
                 const descMatch = match.match(/data-description="([^"]+)"/);
@@ -138,7 +181,7 @@ export default function MarkdownPage({ data }) {
             });
 
     } else if (frontmatter.level === "level2") {
-        replacedHtml = `<h1>${frontmatter.title}</h1>` + 
+        replacedHtml = `<h1>${frontmatter.title}</h1>` +
             replacedHtml
                 .split(/---/)
                 .map(section => section.trim())
@@ -148,7 +191,7 @@ export default function MarkdownPage({ data }) {
                 .join("");
 
     } else if (frontmatter.level === "lots") {
-        replacedHtml = `<h1>${frontmatter.title}</h1>` + 
+        replacedHtml = `<h1>${frontmatter.title}</h1>` +
             replacedHtml
                 .split(/---/)
                 .map(section => section.trim())
@@ -159,9 +202,9 @@ export default function MarkdownPage({ data }) {
 
     return (
         <Layout frontmatter={frontmatter}>
-            <div className={frontmatter.level ? frontmatter.level.toLowerCase() : ''} 
+            <div className={frontmatter.level ? frontmatter.level.toLowerCase() : ''}
                 dangerouslySetInnerHTML={{ __html: replacedHtml }} />
-         </Layout>
+        </Layout>
     );
 }
 
@@ -170,7 +213,7 @@ function expandImage(src, desc) {
     modal.className = 'modal';
     modal.innerHTML = `
         <div class="modal-content">
-            <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+            <span class="close" onclick="this.parentElement.parentElement.remove()">×</span>
             <img src="${src}" alt="${desc}">
             <p class="modal-desc">${desc}</p>
         </div>

@@ -8,19 +8,19 @@ body {
 }
 
 .homepage {
-    padding-top: 4em !important;
+    padding-top: 2em !important;
     text-align: center;
     padding: 20px;
     font-size: 60px;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
 }
 .homepage h2 {
-    font-size: 25px;
+    font-size: 30px;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
     font-weight: 400;
 }
 .homepage p {
-    font-size: 30px;
-    margin-top: 12em;
+    font-size: 40px;
+    margin-top: 12.5em;
     max-width: none;
 }
