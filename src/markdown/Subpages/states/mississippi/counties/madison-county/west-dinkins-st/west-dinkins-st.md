@@ -8,7 +8,7 @@ level: "level3"
 [Section[MainImage]]
 ![](src/images/MS Dinkins 0444.jpeg)
 [[ImageDesc]]
-[End[Mainimage] ]
+[End[Mainimage]]
 
 [Section[Property]]
 # Property
@@ -60,15 +60,6 @@ level: "level3"
 
 ![](src/images/MS Dinkins two doors down from house on Union.jpg)
 [[ImageDesc]Two doors down from house on Union]
-
-![](src/images/MS DinkinsIMG_0442 (1)-2.jpg)
-[[ImageDesc] ]
-
-![](src/images/MS DinkinsIMG_0442 (1).jpeg)
-[[ImageDesc] ]
-
-![](src/images/MS DinkinsIMG_0442 (1).jpg)
-[[ImageDesc] ]
 
 ![](src/images/MS Dinkinsview dinkins to the left.jpg)
 [[ImageDesc]View of Dinkins Street to the left]
