@@ -1,6 +1,6 @@
 const path = require('path');
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const markdownTemplate = path.resolve(`src/templates/markdown-page.js`);
 
@@ -10,6 +10,7 @@ exports.createPages = async ({ actions, graphql }) => {
         edges {
           node {
             id
+            fileAbsolutePath
             frontmatter {
               slug
             }
@@ -20,12 +21,21 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
 
   if (result.errors) {
-    throw result.errors;
+    reporter.panicOnBuild("Error while running GraphQL query.", result.errors);
+    return;
   }
+  
+  const pages = result.data.allMarkdownRemark.edges;
+  pages.forEach(({ node }) => {
+    const slug = node.frontmatter.slug;
+    if (!slug) {
+      reporter.panicOnBuild(
+        `No valid slug found in frontmatter for Markdown file at: ${node.fileAbsolutePath}` // So I know which file did it
+      );
+    }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: slug,
       component: markdownTemplate,
       context: {
         id: node.id,
