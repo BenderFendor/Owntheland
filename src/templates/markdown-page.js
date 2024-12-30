@@ -38,53 +38,38 @@ export default function MarkdownPage({ data }) {
             const filename = src.split('/').pop();
             const newSrc = `/images/${filename}`;
             return `<img src="${newSrc}" alt="${alt || filename}" />`;
-        });
-
-        const videoDivStart = '<div class="video">';
-        const videoDivEnd = '</div>';
-
-       let videoStartIndex = replacedHtml.indexOf(videoDivStart);
-
-       while(videoStartIndex !== -1){
-           let videoEndIndex = replacedHtml.indexOf(videoDivEnd, videoStartIndex);
-           if(videoEndIndex === -1) break;
-
-            const videoDiv = replacedHtml.substring(videoStartIndex, videoEndIndex + videoDivEnd.length);
-
-            const aTagStart = '<a href="';
-           const aTagEnd = '">';
-
-            let aTagStartIndex = videoDiv.indexOf(aTagStart);
-
-           if (aTagStartIndex !== -1) {
-              let aTagEndIndex = videoDiv.indexOf(aTagEnd, aTagStartIndex);
-                if (aTagEndIndex !== -1) {
-
-                  const urlStartIndex = aTagStartIndex + aTagStart.length;
-                   const url = videoDiv.substring(urlStartIndex, aTagEndIndex);
-
-                if (url.includes("youtube.com/watch?v=")) {
-                     const videoId = url.split('v=')[1];
-                    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-                   console.log("embedUrl:", embedUrl);
-
-                     const replacement = `<div class="video-container"><iframe width="560" height="315" src="${embedUrl}" frameborder="0"
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                         allowfullscreen></iframe></div>`;
-
-                        replacedHtml = replacedHtml.substring(0, videoStartIndex) + replacement + replacedHtml.substring(videoEndIndex + videoDivEnd.length) ;
-                        videoStartIndex = replacedHtml.indexOf(videoDivStart);
-                        continue;
-                    }
-                }
+        })
+        // Handle video syntax
+        .replace(
+            /<p>\s*<a href="(https:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_-]+))">\s*Video\s*<\/a>\s*<\/p>/g,
+            (match, fullUrl, videoId) => {
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                return `<iframe width="560" height="315" src="${embedUrl}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>`;
             }
-             videoStartIndex = replacedHtml.indexOf(videoDivStart, videoEndIndex + videoDivEnd.length);
-           }
-
+        );
 
     // Level-specific transformations
     if (frontmatter.level === "level3") {
         replacedHtml = replacedHtml
+            // Merge consecutive property/neighborhood/video blocks into one right-section
+            .replace(
+                /(?:<p>(<div class="(?:property|neighborhood|video)">[\s\S]*?<\/div>)<\/p>\s*)+/g,
+                (fullMatch) => {
+                    const blocks = fullMatch.match(/<div class="(?:property|neighborhood|video)">[\s\S]*?<\/div>/g) || [];
+                    const processed = blocks.map((div) => {
+                        const heading = div.match(/<h1>.*?<\/h1>/)?.[0] || '';
+                        const images = (div.match(/<img[^>]+>/g) || []).join('\n');
+                        const className = div.match(/<div class="([^"]+)">/)?.[1] || '';
+                        return `<div class="${className}">
+                            ${heading}
+                            <div class="image-grid">${images}</div>
+                        </div>`;
+                    }).join('');
+                    return `<div class="right-section">${processed}</div>`;
+                }
+            )
             // Handle image descriptions for level3
             .replace(/\[\[ImageDesc\](.*?)\]/g, (_, p1) =>
                 `<span class="image-desc" data-description="${p1}"></span>`)
@@ -136,11 +121,38 @@ export default function MarkdownPage({ data }) {
                 }
                 return match;
             })
-            // Special handling for Property and Neighborhood sections (pairs)
-            .replace(/<p>(<div class="property">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>|<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="property">[\s\S]*?<\/div>)<\/p>/g,
-                (_, propertyFirst, neighborhoodSecond, neighborhoodFirst, propertySecond) => {
-                    let propertyContent = propertyFirst || propertySecond;
-                    let neighborhoodContent = neighborhoodSecond || neighborhoodFirst;
+            // Special handling for Property, Neighborhood, and Video sections (pairs and triplets)
+            .replace(
+                /<p>(<div class="property">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="video">[\s\S]*?<\/div>)<\/p>|<p>(<div class="video">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="property">[\s\S]*?<\/div>)<\/p>/g,
+                (_, property1, video1, video2, property2) => {
+                    const propertyContent = property1 || property2 || '';
+                    const videoContent = video1 || video2 || '';
+
+                    const processSection = (content, className) => {
+                        if (!content) return '';
+                        const heading = content.match(/<h1>.*?<\/h1>/)?.[0] || '';
+                        const images = (content.match(/<img[^>]+>/g) || []).join('\n');
+                        return `<div class="${className}">
+                            ${heading}
+                            <div class="image-grid">${images}</div>
+                        </div>`;
+                    };
+
+                    const propertySection = processSection(propertyContent, 'property');
+                    const videoSection = processSection(videoContent, 'video');
+
+                    return `<div class="right-section">
+                        ${propertySection}
+                        ${videoSection}
+                    </div>`;
+                }
+            )
+            .replace(
+                /<p>(<div class="property">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="video">[\s\S]*?<\/div>)<\/p>|<p>(<div class="video">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>\s*<p>(<div class="property">[\s\S]*?<\/div>)<\/p>/g,
+                (...matches) => {
+                    const propertyContent = matches[1] || matches[9] || '';
+                    const neighborhoodContent = matches[2] || matches[8] || '';
+                    const videoContent = matches[3] || matches[7] || '';
 
                     const processSection = (content, className) => {
                         if (!content) return '';
@@ -154,14 +166,17 @@ export default function MarkdownPage({ data }) {
 
                     const propertySection = processSection(propertyContent, 'property');
                     const neighborhoodSection = processSection(neighborhoodContent, 'neighborhood');
+                    const videoSection = processSection(videoContent, 'video');
 
                     return `<div class="right-section">
                         ${propertySection}
                         ${neighborhoodSection}
+                        ${videoSection}
                     </div>`;
-                })
-            // Handle lone Property and Neighborhood sections
-            .replace(/<p>(<div class="property">[\s\S]*?<\/div>)<\/p>|<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>/g, (match, propertyDiv, neighborhoodDiv) => {
+                }
+            )
+            // Handle lone Property, Neighborhood, and Video sections
+            .replace(/<p>(<div class="property">[\s\S]*?<\/div>)<\/p>|<p>(<div class="neighborhood">[\s\S]*?<\/div>)<\/p>|<p>(<div class="video">[\s\S]*?<\/div>)<\/p>/g, (match, propertyDiv, neighborhoodDiv, videoDiv) => {
                 const processSection = (content, className) => {
                     if (!content) return '';
                     const heading = content.match(/<h1>.*?<\/h1>/)?.[0] || '';
@@ -176,6 +191,8 @@ export default function MarkdownPage({ data }) {
                     return `<div class="right-section">${processSection(propertyDiv, 'property')}</div>`;
                 } else if (neighborhoodDiv) {
                     return `<div class="right-section">${processSection(neighborhoodDiv, 'neighborhood')}</div>`;
+                } else if (videoDiv) {
+                    return `<div class="right-section">${processSection(videoDiv, 'video')}</div>`;
                 }
                 return match;
             });
@@ -199,6 +216,7 @@ export default function MarkdownPage({ data }) {
                 .map(section => `<div class="states">${section}</div>`)
                 .join("");
     }
+    console.log(replacedHtml);
 
     return (
         <Layout frontmatter={frontmatter}>
