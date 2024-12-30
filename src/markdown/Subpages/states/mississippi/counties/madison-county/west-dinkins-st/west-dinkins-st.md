@@ -6,15 +6,12 @@ level: "level3"
 ---
 
 [Section[MainImage]]
-![](src/images/MS Dinkins 0444.jpeg)
+![](src/images/MS Dinkins 0444.jpg)
 [[ImageDesc]]
 [End[Mainimage]]
 
 [Section[Property]]
 # Property
-
-![](src/images/MS Dinkins 0444.jpg)
-[[ImageDesc]View of West Dinkins Street]
 
 ![](src/images/Ms Dinkins far side of intersection to right on Dinkins.jpg)
 [[ImageDesc]Far side of intersection to right on Dinkins]

@@ -14,7 +14,7 @@ Parcel Number:092H33D024   092H-33D-024-00-00**
 [End[property]]
 
 [Section[property]]
-![West-Dinkins-St](src/images/MS Dinkins 0444.jpeg)
+![West-Dinkins-St](src/images/MS Dinkins 0444.jpg)
 ## [West Dinkins St](west-dinkins-st/)
 0.22 acre
 
