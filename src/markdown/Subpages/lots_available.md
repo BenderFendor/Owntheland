@@ -1,6 +1,6 @@
 ---
 slug: "/lots"
-title: "Available Lots"
+title: "Lots Available"
 date: "2024-01-01"
 level: "lots"
 ---

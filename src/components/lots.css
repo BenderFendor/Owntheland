@@ -10,15 +10,7 @@
         background-position: center;
     }
 
-    .states {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 1em;
-        padding: 1em;
-        margin: 1em 0;
-    }
+
 
     .pennsylvania, .missouri, .mississippi, .tennessee {
         background-color: #fff;
@@ -28,8 +20,7 @@
         margin: 2em;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
-        width: calc(50% - 4em);
-        display: inline-block;
+        display: inline-block; 
         vertical-align: top;
     }
 
@@ -37,7 +28,62 @@
         transform: translateY(-5px);
         box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
-
+    .pennsylvania {
+        position: absolute;
+        left: 47%;
+        top: 10%;
+        background-image: url('../images/pennsylvaniamap.png');
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0) !important;
+        width: 700px;
+        box-shadow: none;
+    }
+    .mississippi {
+        position: absolute;
+        left: 65%;
+        top: 55%;
+        background-image: url('../images/mississippimap.png');
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0) !important;
+        width: 400px;
+        height: 400px;
+        box-shadow: none;
+    }
+    .missouri {
+        position: absolute;
+        left: 10%;
+        background-image: url('../images/missourimap.png');
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0) !important;
+        width: 600px;
+        box-shadow: none;
+    }
+    .tennessee {
+        position: absolute;
+        left: 20%;
+        top: 70%;
+        background-image: url('../images/tennesseemap.png');
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0) !important;
+        width: 1000px;
+        box-shadow: none;
+    }
+    .tennessee h3 {
+        padding-left: 2em;
+    }
+    .missouri h3 {
+        padding-left: 2em;
+    }
+    .missouri ul {
+        padding-left: 4em;
+    }
+    .mississippi h3 {
+        padding-left: 2.5em;
+    }
     h1, h2 {
         text-align: center;
         color: #ffffff;
