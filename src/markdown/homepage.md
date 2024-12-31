@@ -6,7 +6,8 @@ level: "Homepage"
 background: "/images/homepageflowers.jpg"
 ---
 
-# OWN THE L
+# OWN THE LAND
+
 ## AND PAY IN INSTALLMENTS
 
 Family-size Affordable Lots Are Our Specialty
