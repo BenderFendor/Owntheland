@@ -165,3 +165,5 @@ to style it so that its not like 1000 px wide
 
 st louis county for example
 try and use css only logic for that.
+
+When you add an image to a file like ![](src/images/MS Dinkins farther yet down Dinkins to the left.jpg) it for some reason needs spaces so you can have the name like welcometopennsylvania.jpg and it will not work. I should fix that.

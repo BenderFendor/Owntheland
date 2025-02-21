@@ -10,15 +10,25 @@
         background-position: center;
     }
 
-
-
+    .pennsylvaniaimage {
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        height: auto;
+        z-index: 101;
+    }
+    .pennsylvaniaimage img {
+        margin: 0 !important;
+        border: #ffffff 10px solid;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
     .pennsylvania, .missouri, .mississippi, .tennessee {
         background-color: #fff;
         color: #333;
         border-radius: 8px;
         padding: 2em;
         margin: 2em;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
         display: inline-block; 
         vertical-align: top;
@@ -31,13 +41,16 @@
     .pennsylvania {
         position: absolute;
         left: 47%;
-        top: 10%;
+        top: 15%;
         background-image: url('../images/pennsylvaniamap.png');
         background-size: contain; 
         background-repeat: no-repeat;
         background-color: rgba(0, 0, 0, 0.0) !important;
         width: 700px;
         box-shadow: none;
+        z-index: 10;
+        text-align: center;
+
     }
     .mississippi {
         position: absolute;
@@ -51,9 +64,25 @@
         height: 400px;
         box-shadow: none;
     }
+    
+    .missouriimage {
+        position: absolute;
+        top: 43%;
+        left: 4%;
+        max-width: 300px;
+        height: auto;
+        z-index: 101;
+    }
+    .missouriimage img {
+        margin: 0 !important;
+        border: #ffffff 10px solid;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
     .missouri {
         position: absolute;
-        left: 10%;
+        left: 12%;
+        top: 15%;
         background-image: url('../images/missourimap.png');
         background-size: contain; 
         background-repeat: no-repeat;
@@ -73,7 +102,10 @@
         box-shadow: none;
     }
     .tennessee h3 {
-        padding-left: 2em;
+        padding-left: 6em;
+    }
+    .tennessee ul {;
+        padding-left: 7em;
     }
     .missouri h3 {
         padding-left: 2em;
@@ -83,6 +115,34 @@
     }
     .mississippi h3 {
         padding-left: 2.5em;
+    }
+    .mississippiimage {
+        position: absolute;
+        top: 78%;
+        left: 60%;
+        max-width: 300px;
+        height: auto;
+        z-index: 101;
+    }
+    .mississippiimage img {
+        margin: 0 !important;
+        border: #ffffff 10px solid;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .tennesseeimage {
+        position: absolute;
+        top: 60%;
+        left: 30%;
+        max-width: 300px;
+        height: auto;
+        z-index: 101;
+    }
+    .tennesseeimage img {
+        margin: 0 !important;
+        border: #ffffff 10px solid;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     h1, h2 {
         text-align: center;
