@@ -89,18 +89,21 @@ export default function MarkdownPage({ data }) {
                 let desc = alt; // Default to alt text
 
                 try {
-                    // Find the image in the original markdown
+                    // Extract the filename from the src
                     const filename = src.split('/').pop();
+                    // Escape special regex characters in the filename (handles periods, etc.)
                     const safeFilename = filename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-                    // Look for ImageDesc tag after this specific image
+                    // Build the regex pattern to look for the optional [[ImageDesc]] tag that follows the markdown image
+                    // Allows any whitespace characters (including newlines) between the image closing parenthesis and the [[ImageDesc]] tag.
                     const imgDescPattern = new RegExp(
-                        `!\\[.*?\\]\\([^)]*?${safeFilename}[^)]*?\\)\\s*\\[\\[ImageDesc\\]([^\\]]+)\\]`,
+                        `!\\[.*?\\]\\([^)]*?${safeFilename}[^)]*?\\)[\\s\\n]*\\[\\[ImageDesc\\]([^\\]]+)\\]`,
                         'i'
                     );
 
                     const descMatch = html.match(imgDescPattern);
                     if (descMatch && descMatch[1]) {
+                        // Use the provided image description (trimmed) if found
                         desc = descMatch[1].trim();
                     }
                 } catch (error) {
@@ -110,9 +113,11 @@ export default function MarkdownPage({ data }) {
                 // Split the description by "|" and join with <br> for multi-line support
                 const formattedDesc = desc.split('|').join('<br>');
 
-                const escapedSrc = normalizedSrc.replace(/"/g, '"');
-                const escapedDesc = formattedDesc.replace(/"/g, '"');
+                // Escape quotes in src and description for safe HTML attribute usage
+                const escapedSrc = normalizedSrc.replace(/"/g, '&quot;');
+                const escapedDesc = formattedDesc.replace(/"/g, '&quot;');
 
+                // Return the final <img> tag with event handling to allow image expansion
                 return `<img src="${escapedSrc}" alt="${escapedDesc}" class="thumbnail" data-description="${escapedDesc}" onclick="expandImage('${escapedSrc}', '${escapedDesc}')" />`;
             })
 
