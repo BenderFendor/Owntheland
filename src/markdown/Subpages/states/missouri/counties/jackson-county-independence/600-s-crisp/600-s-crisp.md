@@ -20,6 +20,10 @@ level: "level3"
 [[ImageDesc]Map showing the location within Independence, Missouri]
 
 ![](src/images/Screenshot 2024-12-15 100049.jpg)
-[[ImageDesc] map view of the property location]
+[[ImageDesc] map view of the property location]   
+
+![](src/images/JacksonCo Crisp 1 just beyond lot.jpg)
+[[ImageDesc] View just beyond the lot]
+
 
 [End[Property]]
