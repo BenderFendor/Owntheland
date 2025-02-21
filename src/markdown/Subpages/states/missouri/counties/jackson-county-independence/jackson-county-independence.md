@@ -8,7 +8,7 @@ level: "level2"
 [Section[property]]
 ![600-S-Crisp](src/images/Lev 4 MO JacksonCo 600 Crisp 6th st headed toward intersection with Crisp.jpg)
 ## [600 S. Crisp Ave](/lots/states/missouri/counties/independence/600-s-crisp/)
-**Acreage**: 0.290 acre
+**Acreage**: 0.2900 acre
 
 **Parcel Number**: 27-110-07-01-00-0-00-000
 [End[property]]
