@@ -6,8 +6,8 @@ level: "level3"
 ---
 
 [Section[MainImage]]
-![](src/images/Lev 4 MO JacksonCo 600 Crisp 6th st headed toward intersection with Crisp.jpg)
-[[ImageDesc]View of 6th Street heading toward its intersection with Crisp Avenue]
+![](src/images/JacksonCo Crisp 10 the lot.jpg)
+[[ImageDesc]View of 600 Crisp Avenue]
 [End[MainImage]]
 
 [Section[Property]]
