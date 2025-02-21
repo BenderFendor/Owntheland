@@ -7,7 +7,8 @@ level: "level3"
 
 [Section[MainImage]]
 ![](src/images/JacksonCo Crisp 10 the lot.jpg)
-[[ImageDesc]View of 600 Crisp Avenue]
+[[ImageDesc]View of 600 Crisp Avenue
+Intersection of Crisp and E. 6th St.]
 [End[MainImage]]
 
 [Section[Property]]
