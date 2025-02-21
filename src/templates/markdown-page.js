@@ -107,8 +107,11 @@ export default function MarkdownPage({ data }) {
                     console.warn(`Error finding description for ${src}:`, error);
                 }
 
+                // Split the description by "|" and join with <br> for multi-line support
+                const formattedDesc = desc.split('|').join('<br>');
+
                 const escapedSrc = normalizedSrc.replace(/"/g, '"');
-                const escapedDesc = desc.replace(/"/g, '"');
+                const escapedDesc = formattedDesc.replace(/"/g, '"');
 
                 return `<img src="${escapedSrc}" alt="${escapedDesc}" class="thumbnail" data-description="${escapedDesc}" onclick="expandImage('${escapedSrc}', '${escapedDesc}')" />`;
             })
@@ -117,7 +120,9 @@ export default function MarkdownPage({ data }) {
                 const imgMatch = match.match(/<img[^>]+>/);
                 const descMatch = match.match(/data-description="([^"]+)"/);
                 if (imgMatch && descMatch) {
-                    return match.replace('</div>', `<p class="mainimage-description">${descMatch[1]}</p></div>`);
+                    // Split the description by "|" and join with <br> for multi-line support
+                    const formattedDesc = descMatch[1].split('|').join('<br>');
+                    return match.replace('</div>', `<p class="mainimage-description">${formattedDesc}</p></div>`);
                 }
                 return match;
             })
@@ -227,13 +232,16 @@ export default function MarkdownPage({ data }) {
 }
 
 function expandImage(src, desc) {
+    // Split the description by "|" and join with <br> for multi-line support
+    const formattedDesc = desc.split('|').join('<br>');
+
     const modal = document.createElement('div');
     modal.className = 'modal';
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close" onclick="this.parentElement.parentElement.remove()">×</span>
             <img src="${src}" alt="${desc}">
-            <p class="modal-desc">${desc}</p>
+            <p class="modal-desc">${formattedDesc}</p>
         </div>
     `;
     document.body.appendChild(modal);

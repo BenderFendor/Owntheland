@@ -118,8 +118,8 @@
     }
     .mississippiimage {
         position: absolute;
-        top: 78%;
-        left: 60%;
+        top: 73%;
+        left: 55%;
         max-width: 300px;
         height: auto;
         z-index: 101;
@@ -132,8 +132,8 @@
     }
     .tennesseeimage {
         position: absolute;
-        top: 60%;
-        left: 30%;
+        top: 73%;
+        left: 12%;
         max-width: 300px;
         height: auto;
         z-index: 101;
