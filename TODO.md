@@ -14,6 +14,10 @@ So for level three with the image thumbnails, have the width 100% and the height
 
 Have the tree as the background.
 
+Also when you have two spaces in a row for in image name it doesn't load right.
+
+Maybe make a script so that it cleans the image names and makes them all lowercase and replaces spaces with dashes. or something.
+
 # Things for 12/27
 Have the website completely add images details for each county.
 

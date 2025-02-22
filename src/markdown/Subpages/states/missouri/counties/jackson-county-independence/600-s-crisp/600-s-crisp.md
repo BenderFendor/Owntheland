@@ -28,7 +28,7 @@ level: "level3"
 ![](src/images/JacksonCo Crisp 4 lot at corner of crisp and E 6th.jpg)
 [[ImageDesc]Lot at the corner of Crisp and E. 6th St.]
 
-![](src/images/JacksonCo Crisp 5 lot from E 6th st 3.pg)
+![](src/images/JacksonCo Crisp 5 lot from E 6th st 3.jpg)
 [[ImageDesc]Lot as seen from E. 6th St.] 
 
 ![](src/images/JacksonCo Crisp 6 lot from the E 6th st side.jpg)

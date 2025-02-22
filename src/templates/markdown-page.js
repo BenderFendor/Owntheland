@@ -35,7 +35,12 @@ export default function MarkdownPage({ data }) {
         .replace(/\[End\[(.*?)\]\]/g, "</div>")
         // Basic image handling
         .replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
-            const filename = src.split('/').pop();
+            // Extract the filename from the src
+            let filename = src.split('/').pop();
+
+            // Replace multiple spaces with a single space
+            filename = filename.replace(/\s+/g, ' ');
+
             const newSrc = `/images/${filename}`;
             return `<img src="${newSrc}" alt="${alt || filename}" />`;
         })
@@ -85,6 +90,9 @@ export default function MarkdownPage({ data }) {
                 let normalizedSrc = src.startsWith('src/images/')
                     ? src.replace('src/images/', '/images/')
                     : src;
+
+                // Debug print to show where the image is being loaded from
+                console.log(`Loading image from: ${normalizedSrc}`);
 
                 let desc = alt; // Default to alt text
 
